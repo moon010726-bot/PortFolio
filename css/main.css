@@ -1,0 +1,1045 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'paperlogy';
+    src: url(../font/Paperlogy-4Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.p, .text {
+    font-family: 'paperlogy';
+}
+x{
+    color: #59A8D9;
+    color: #275fd9;
+    color: #293fbf;
+    color: #020c46;
+
+    color: #ccc;
+    color: #0d0d0d;
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* .scroll {
+    height: 100vh;
+    overflow-y: auto;
+} */
+
+body {
+    overflow-x: hidden;
+}
+/* 메인 사이드 메뉴 */
+header {
+    width: 180px;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: #275fd9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+}
+.headerbutton {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25px; right: -50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    
+    border-radius: 0 10px 10px 0;
+    display: none;
+}
+.headerbutton .line {
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+}
+
+header nav {
+    height: 400px;
+    flex: 1;
+}
+header p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+}
+header nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    font-size: 1.5rem;
+    color:#59A8D9;
+}
+
+header nav ul li.on {
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+header .tg {
+    display: none;
+}
+
+/* 메인영역 */
+main {
+    margin-left: 180px;
+    position: relative;
+    background-color:#020c46;
+}
+main .mainbox {
+    width: 99%;
+    height: 95vh;
+    background-color: #ccc;
+    border-radius: 20px;
+    position: relative;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 포폴 커버 */
+.portfolio {
+    width: 100%;
+    height: 100vh;
+    background-color: #020c46;
+}
+.portfolio figure {
+    width: 100%;
+    height: 100%;
+}
+.portfolio figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* 프로필 */
+/*1 헬로?*/
+.hello {
+    width: 100%;
+    background-color:#293fbf;
+    color: #fff;
+}
+.hello figure {
+    width: 100%;
+}
+.hello figure img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+/*2 명함*/
+.name-card {
+    width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.card {
+    position: relative;
+    width: 650px;
+    height: 380px;
+    background-color: #293fbf;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.415);
+}
+.card figure {
+    width: 250px;
+    height: 250px;
+    margin-left: 30px;
+}
+.card figure img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card .text {
+    color: #fff;
+}
+.card .text h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.card .text h3 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+
+/* 3 시간*/
+.ee-line {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+    color: #fff;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ee-line p {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.ee-line .line {
+    margin-bottom: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ee-line .box {
+    width: 1678px;
+    height: 458px;
+}
+.ee-line .line .box figure {
+    width: 100%;
+    height: 100%;
+}
+.ee-line .line .box figure img  {
+    width: 70%;
+    display: block;
+    margin: 1rem auto;
+}
+
+
+
+/* 4  소프트웨어*/
+.softwares {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+    background-color: #020c46;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.softwares .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 50px;
+    color: #fff;
+}
+.softwares .icon-box {
+    width: 100%;
+    height: 300px;
+    background-color: #020826;
+    box-shadow: 
+    inset 0 20px 20px -20px #0d0d0d,
+    inset 0 -20px 20px -20px #0d0d0d;
+    border: none;
+    color: #fff;
+
+
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.softwares .icon-box .icon {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.softwares .icon-box .icon .text {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.softwares .icon-box figure {
+    width: 80px;
+    height: 80px;
+}
+.softwares .icon-box figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* 5 특기*/
+.strengths {
+    width: 100%;
+    height: 800px;
+    margin-top: 50px;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.strengths p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 50px;
+}
+.strengths .ip {
+    width: 80%;
+    height: 550px;
+    margin-top: 30px;
+    padding: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.strengths .ip .box {
+    width: 300px;
+    height: 100px;
+    background-color: #020826;
+    border-radius: 20px;
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.strengths .ip .box img {
+    filter :invert(100%)
+}
+.strengths .ip .box .text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.strengths .ip .box figure {
+    width: 70px;
+    height: 70px;
+}
+.strengths .ip .box figure img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 6 올해 목표*/
+.goal {
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+    position: relative;
+    color: #fff;
+
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.goal p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 50px
+}
+.goal .tx {
+    margin-top: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.goal .box {
+    width: 450px;
+    height: 150px;
+    background-color: #020826;
+    border-radius: 20px;
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.goal .tx .box figure {
+    width: 70px;
+    height: 70px;
+}
+.goal .tx .box figure img {
+    width: 100%;
+    height: 100%;
+    filter :invert(100%)
+}
+.goal .tx .box .text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+/* 7 흥미*/
+.interest {
+    width: 100%;
+    height: 60vh;
+    margin-top: 50px;
+    background-color: #293fbf;
+    color: #fff;
+    clip-path: circle(8.6% at 50% 18%);
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all .5s;
+    cursor : pointer;
+}
+.interest:hover {
+    clip-path: circle(70.7% at 50% 50%);
+}
+.interest p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 50px;
+}
+.interest .gr {
+    width: 80%;
+    margin-top: 70px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.interest .box {
+    width: 250px;
+    height: 100px;
+    background-color: #020826;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.interest .gr .box figure {
+    width: 70px;
+    height: 70px;
+}
+.interest .gr .box figure img {
+    width: 100%;
+    height: 100%;
+    filter :invert(100%)
+
+}
+.interest .gr .box .text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+
+/* 프로젝트 */
+.title-work {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.gallery {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-bottom : 8rem;
+}
+
+.gallery .gallery-collection {
+    width: 100%;
+    height: 800px;
+    padding-top: 3vh;
+    padding-left: 5vh;
+    display: flex;
+}
+
+.gallery .gallery-collection li {
+    flex: 1;
+    margin-bottom: 20px;
+    padding: 4vh 2vw 6vh;
+    transition: all .5s;
+    position: relative;
+    cursor: pointer;
+}
+.gallery .gallery-collection li::before {
+    content: '';
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    top: 0; left: -100px;
+    background-color: #293fbf;
+    opacity: 0;
+    transition: all .5s;
+}
+.gallery .gallery-collection li:hover::before {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+.gallery .gallery-collection li:hover {
+    flex: 1.5;
+}
+
+.gallery .gallery-collection li .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    z-index: 9;
+    color: #fff;
+}
+
+.gallery .gallery-collection li .inner h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 5vh;
+    margin-bottom: 10px;
+    transition: all .5s;
+}
+.gallery .gallery-collection li .inner h3::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 5px;
+    background-color: #275fd9;
+    transition: all .5s;
+}
+.gallery .gallery-collection li:hover .inner h3::after {
+    width: 100%;
+    background-color: #59A8D9;
+}
+.gallery .gallery-collection li:hover .inner h3 {
+    font-size: 2.5rem;
+    padding-top: 0;
+    color: #fff;
+}
+.gallery .gallery-collection li .inner figure {
+    width: 100%;
+    height: 30%;
+}
+.gallery .gallery-collection li .inner figure video,.gallery .gallery-collection li .inner figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .mor {
+    width: 400px;
+    height: 50px;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #020826;
+    border: 4px solid #59A8D9;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    display : block;
+    margin : 0 auto;
+}
+.gallery .mor:hover {
+    background-color: #59A8D9;
+    color: #fff;
+}
+
+
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: -100%;
+    background-color: #020c46;
+    z-index: 99;
+    padding: 20vh 10vw 14vh 10vw;
+    margin-left: 180px;
+
+    display: flex;
+    justify-content: space-between;
+    transition: all .5s;
+}
+.popup.on {
+    left: 0;
+}
+
+.popup .text {
+    width: 25%;
+}
+.popup .text h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.popup .text p {
+    color: #ddd;
+    font-size: 1rem;
+}
+
+.popup .text button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #59A8D9;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.popup figure {
+    width: 70%;
+    margin-right: 50px;
+    overflow-y: auto;
+}
+.popup figure video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.popup figure img {
+    width: 100%;
+    height: auto;
+}
+
+/* 프로젝트 리스트 */
+.project-list {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    z-index: 999;
+    background-color: #020c46;
+    margin-left: 180px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.project-list.on {
+    transform: translateX(0);
+}
+
+.project-list .header {
+    position: sticky;
+    width: 100%;
+    height: 80px;
+    top: 0; left: 0;
+    background-color: #275fd9;
+    z-index: 999;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.project-list .header nav {
+    width: 500px;
+    color: #0d0d0d;
+    font-weight: 700;
+}
+.header nav .arrow-left {
+    width: 30px;
+    height: 30px;
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%) rotate(-135deg);
+    cursor: pointer;
+}
+.header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.header nav li.on {
+    color: #fff;
+}
+
+
+
+.project-list .main {
+    width: 100%;
+    height: 80vh;
+    margin-top: 50px;
+    padding-top: 3rem;
+    padding-left: 5rem;
+}
+.project-list .main h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+}
+.project-list .main .list-box {
+    width: 300px;
+    height: 250px;
+    background-color: #293fbf;
+    border-radius: 20px;
+    border: 6px solid #293fbf;
+    position: relative;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.main .list-box:hover {
+    transform: scale(1.1);
+    z-index: 99;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.project-list .main .list .list-box figure {
+    width: 100%;
+    height: 70%;
+}
+.project-list .main .list .list-box figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.project-list .main .list .list-box .text {
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.project-list .main .list .list-box p {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+.project-list .main .list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 40px
+    ;
+    margin-top: 2rem;
+}
+
+
+
+/* 연락 박스 */
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: #020826;
+    display: flex;
+    align-items: center;
+}
+.contact-box {
+    width: 700px;
+    height: 800px;
+    background-color: #020c46;
+    color: #fff;
+    border: 5px solid #275fd9;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 100px 40px 40px;
+}
+
+.contact-box div{
+    margin-bottom: 10px;
+}
+.dunguri {
+    display: flex;
+    gap: 10px;
+}
+.dunguri > div {
+    flex: 1;
+}
+.contact-box p {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: -60px;
+    margin-bottom: 70px;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+input, textarea {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 5px;
+    background-color: rgb(6, 5, 27);
+
+    font-size: 0.5rem;
+    font-family: 'paperlogy';
+    color: #ccc;
+}
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+    font-size: 1rem;
+}
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.bt {
+    width: 600px;
+    height: 70px;
+    color: #fff;
+    background-color: #275fd9;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 40px;
+}
+.bt:hover {
+    background-color: #59A8D9;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .headerbutton {
+        display: flex;
+        right: 20px;
+        top: 5px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    header .PC {
+        display: none;
+    }
+    .tg {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #275fd9;
+        z-index: 999;
+    }
+    .tg ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        padding: 20px 0;
+    }
+
+    .name-card .card {
+        width: 90%;
+        height: 40%;
+    }
+    .ee-line .line .box figure img {
+        width: 90%;
+    }
+    .hello figure img {
+        width: 90%;
+    }
+    .softwares .icon-box .icon {
+        width: calc(100% / 7);
+    }
+    .softwares .icon-box .icon img {
+        width: 90%;
+        object-fit: contain;
+    }
+    .softwares .icon-box {
+        display: flex;
+    }
+    header .tg {
+        left: 0;    
+        width: 100%;
+        height: 100px;
+    }
+    .tg ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0;
+    }
+    main {
+        margin-left: 0;
+        padding-top: 60px;
+    }
+    .strengths {
+        height: auto;
+    }
+    .strengths .ip {
+        height: auto;
+    }
+    .goal {
+        height: auto;
+    }
+    .gallery .gallery-collection {
+        height: 70vh;
+    }
+    .gallery .gallery-collection li .inner h3 {
+        font-size: 1.2rem;
+    }
+    .gallery .gallery-collection li .inner p {
+        font-size: 1rem;
+        color: #eee;
+    }
+    .portfolio {
+        height: 70vh;
+    }
+    .project-list {
+        margin-left: 0;
+    }
+    .popup {
+        margin-left: 0;
+    }
+    .contact-box {
+        width: 100%;
+    }
+
+    .project-list {
+        margin-top: 60px;
+    }
+
+    .contact-box form {
+        width: 90%;
+    }
+    .contact-box form .bt {
+        width: 100%;
+    }
+
+    .interest {
+        height: auto;
+    }
+}
+@media screen and (max-width: 468px) {
+    
+
+    .name-card {
+        height: auto;
+    }
+    .card {
+        width: 70%;
+        height: auto;
+        display: block;
+
+        text-align: center;
+    }
+    .card figure {
+        margin: 30px auto;
+        margin-bottom: 10px;
+        width: 70%;
+        height: 50%;
+    }
+    .card figure .text {
+        text-align: center;
+    }
+    .card 
+
+    .softwares .icon-box .icon {
+        width: calc(100% / 7);
+    }
+    .softwares .icon-box .icon img {
+        width: 80%;
+    }
+
+    .goal .box {
+        width: 80%;
+        height: auto;
+        padding: 10px;
+    }
+    .goal .text {
+        font-size: 1rem;
+    }
+
+    .softwares .icon figure {
+        width: 80%;
+    }
+    .softwares .icon-box .icon img {
+        width: 95%;
+        object-fit: contain;
+    }
+    .softwares .icon-box {
+        display: flex;
+    }  
+    .softwares .icon-box .icon .text {
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+    .interest {
+        height: auto;
+    }
+
+    .gallery .mor {
+        width: 90%;
+    }
+
+    .contact-box {
+        height: auto;
+    }
+    .contact .contact-box form {
+        font-size: 1rem;
+    }
+    .contact .contact-box form .dunguri {
+        display: block;
+    }
+    .contact .contact-box form input {
+        width: 90%;
+        font-size: 1em;
+    }
+
+    .project-list .header {
+        font-size: 1.5rem;
+    }
+    .project-list .header .arrow-left {
+        margin-left: -40px;
+    }
+}
